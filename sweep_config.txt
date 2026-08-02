@@ -1,0 +1,36 @@
+# -----------------------------------------------------------------------
+# AerospaceShieldingSim sweep configuration
+#
+# Edit this file and rerun ./sim -- you do NOT need to recompile anything
+# to change these values.
+#
+# "materials" must be composition names generated from MaterialLibrary.h
+# (run `./sim --list-materials` to print the exact strings). Material names
+# are derived from composition, e.g. a material that's 61.3% C / 11.9% H /
+# 10.6% N / 16.2% O is named "C61.3H11.9N10.6O16.2" -- you don't make names
+# up. If you want to test a material that isn't in the list yet, add it to
+# MaterialLibrary.h first (see that file for instructions), rebuild once,
+# then run --list-materials to get its generated name.
+# -----------------------------------------------------------------------
+
+# HDPE-like, Polyimide-like, PDMS-like, TPU-like (see MaterialLibrary.h)
+materials = C85.7H14.3, C69.1H2.6N7.7O20.6, C32.4H8.1O21.6Si37.9, C61.3H11.9N10.6O16.2
+
+# Shield thickness sweep, in cm
+thickness_min_cm = 1.0
+thickness_max_cm = 10.0
+thickness_step_cm = 1.0
+
+# Proton beam energy sweep, in MeV
+energy_min_MeV = 10
+energy_max_MeV = 200
+energy_step_MeV = 10
+
+# Primary protons fired per (material, thickness, energy) point.
+# Higher = smoother/less noisy results, but slower.
+events_per_point = 100000
+
+random_seed = 12345
+
+# Where the results CSV gets written (relative to where you run ./sim from)
+output_csv = shielding_results.csv

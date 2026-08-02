@@ -1,0 +1,27 @@
+# CMake build files
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# Compiled files
+*.o
+*.obj
+*.exe
+*.dylib
+*.so
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# VS Code local settings
+.vscode/
+
+# Generated simulation output
+shielding_results.csv
