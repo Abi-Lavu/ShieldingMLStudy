@@ -29,7 +29,6 @@ COMPOSITION = MATERIALS_DF[ELEMENTS].div(MATERIALS_DF[ELEMENTS].sum(axis=1), axi
 
 
 def blend_cluster(cluster_id: int) -> dict:
-    """Dirichlet-blend every material in a cluster into one synthetic candidate."""
     members = MATERIALS_DF.index[MATERIALS_DF["cluster"] == cluster_id]
     weights = rng.dirichlet(np.ones(len(members)))
 
