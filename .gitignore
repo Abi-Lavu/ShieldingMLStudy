@@ -25,3 +25,4 @@ __pycache__/
 
 # Generated simulation output
 shielding_results.csv
+synthetic_materials.csv
